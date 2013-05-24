@@ -1,7 +1,7 @@
 three.js-displacement-map
 =========================
 
-A bare-bones example of a displacement map using three.js.
+A bare-bones example of a displacement map using [three.js](https://github.com/mrdoob/three.js/).
 
 Demo running here:
 
