@@ -1,6 +1,7 @@
 <html>
 <head>
   <script src="three.min.js"></script>
+	<script type="text/javascript" src="dat.gui.min.js"></script>
 </head>
 
 <body>
@@ -67,6 +68,24 @@
 	}
 
 	requestAnimationFrame( animate );
+  
+  // GUI
+  
+ 	var initDisp = function() {
+		this.message = 'adjust displacement';
+		this.scale = 50;
+    
+  }
+  
+  window.onload = function() {
+	  var disp = new initDisp();
+	  var gui = new dat.GUI();
+	  gui.add(disp, 'message');
+	  controller = gui.add(disp, 'scale', -200, 200);
+    controller.onChange(function(value) {
+     	uniforms[ "uDisplacementScale" ].value = value;
+    });
+	};
 	
 </script>
 </html>       
